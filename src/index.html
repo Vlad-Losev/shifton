@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>shifton</title>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+      const createLink = url => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = url;
+        document.head.append(link);
+      }
+      createLink('css/index.css')
+    })</script>
+  <script defer src="./js/index.min.js"></script>
+</head>
+
+<body>
+  <div class="body__wrapper">
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="header__logo">
+          <picture>
+            <source srcset="./img/logo.avif" type="image/avif">
+            <source srcset="./img/logo.webp" type="image/webp">
+            <img class="header__logo__img" src="./img/logo.png" alt="Логотип" loading="lazy" width="256" height="73">
+          </picture>
+        </a>
+
+        <div class="header__block2">
+          <nav class="header__nav" id="menu">
+            <a href="#" class="header__nav__item">главная</a>
+            <a href="#" class="header__nav__item">тарифы</a>
+            <a href="#" class="header__nav__item">возможности </a>
+            <a href="#" class="header__nav__item">блог</a>
+            <a href="#" class="header__nav__item">чаво</a>
+            <a href="#" class="header__nav__item">вход</a>
+
+            <button class="header__btn">Регистрация</button>
+          </nav>
+
+          <!-- <button class="header__btn">Регистрация</button> -->
+
+          <button class="header__btn-language">рус</button>
+
+          <div class="header__burger" id="burger">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <h1 class="hero__title">Автоматизированное составление рабочих расписаний онлайн</h1>
+
+          <ul class="hero__list">
+            <li class="hero__item">Экономия времени и денег</li>
+
+            <li class="hero__item">Грамотное распределение рабочей нагрузки</li>
+
+            <li class="hero__item">Построение оптимального сменного рабочего расписания для количества сотрудников</li>
+          </ul>
+
+          <button class="hero__btn">Попробовать бесплатно</button>
+        </div>
+      </section>
+
+      <section class="capability">
+        <div class="container capability__container">
+          <h2 class="capability__title">Возможности Shifton</h2>
+
+          <ul class="capability__list">
+            <li class="capability__item">
+              <div class="capability__item__img__wrapper capability__item__img__wrapper_1">
+                <img class="capability__item__img" src="./img/capability-img-1.svg" alt="#">
+              </div>
+
+              <div class="capability__item__title-1">Распределяй работу</div>
+
+              <div class="capability__item__title-2">Планирование смен
+              </div>
+
+              <ul class="capability__item__list-2">
+                <li class="capability__item__item-2">Настраиваемые шаблоны смен</li>
+
+                <li class="capability__item__item-2">Обмен сменами между сотрудниками</li>
+
+                <li class="capability__item__item-2">Праздничные и особые дни</li>
+
+                <li class="capability__item__item-2">Свободные смены</li>
+
+                <li class="capability__item__item-2">Соблюдение трудового законодательства</li>
+
+                <li class="capability__item__item-2">Синхронизация с календарем</li>
+              </ul>
+
+              <div class="capability__link">
+                <a class="capability__link__btn" href="#">Подробнее</a>
+              </div>
+            </li>
+
+            <li class="capability__item">
+              <div class="capability__item__img__wrapper capability__item__img__wrapper_2">
+                <img src="./img/capability-img-2.svg" alt="#">
+              </div>
+
+              <div class="capability__item__title-1">Управляй и контролируй</div>
+
+              <div class="capability__item__title-2">Контроль сотрудников
+              </div>
+
+              <ul class="capability__item__list-2">
+                <li class="capability__item__item-2">Назначение задач</li>
+
+                <li class="capability__item__item-2">Создание контрольных списков</li>
+
+                <li class="capability__item__item-2">Отслеживание опозданий</li>
+
+                <li class="capability__item__item-2">Сравнение запланированных и завершенных задач</li>
+
+                <li class="capability__item__item-2">Отчеты об отработанных часах, зарплатах сотрудников и
+                  отпускным/больничным дням</li>
+              </ul>
+
+              <div class="capability__link">
+                <a class="capability__link__btn" href="#">Подробнее</a>
+              </div>
+            </li>
+
+            <li class="capability__item">
+              <div class="capability__item__img__wrapper capability__item__img__wrapper_3">
+                <img src="./img/capability-img-3.svg" alt="#">
+              </div>
+
+              <div class="capability__item__title-1">Масштабируй</div>
+
+              <div class="capability__item__title-2">Интеграции и неограниченный доступ</div>
+
+              <ul class="capability__item__list-2">
+                <li class="capability__item__item-2">Возможность интеграции</li>
+
+                <li class="capability__item__item-2">Доступ 24/7 с любого устройства с выходом в Интернет</li>
+
+                <li class="capability__item__item-2">Система уведомлений</li>
+
+                <li class="capability__item__item-2">Универсальность</li>
+              </ul>
+
+              <div class="capability__link">
+                <a class="capability__link__btn" href="#">Подробнее</a>
+              </div>
+            </li>
+
+            <li class="capability__item">
+              <div class="capability__item__img__wrapper capability__item__img__wrapper_4">
+                <img src="./img/capability-img-4.svg " alt="#">
+              </div>
+
+              <div class="capability__item__title-1 capability__item__title-1_width">Планируй и составляй прогнозы</div>
+
+              <div class="capability__item__title-2">Оценки и прогнозы
+              </div>
+
+              <ul class="capability__item__list-2">
+                <li class="capability__item__item-2">Планирование перерывов</li>
+
+                <li class="capability__item__item-2">Планирование отпусков</li>
+
+                <li class="capability__item__item-2">Безопасное хранение документов</li>
+              </ul>
+
+              <div class="capability__link">
+                <a class="capability__link__btn" href="#">Подробнее</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="automatize">
+        <div class="container automatize__container">
+          <h1 class="automatize__title">Автоматизированное создание онлайн расписаний</h1>
+
+          <ul class="automatize__list">
+            <li class="automatize__item automatize__item_1">
+              <p class="automatize__item__text">
+                Онлайн-система Shifton разработана для оптимизации времени и ресурсов в создании рабочих расписаний
+                сотрудников. Shifton - прекрасное решение для компаний любых сфер деятельности и размеров.
+              </p>
+
+              <a href="#" class="automatize__item__link">Зарегистирироваться</a>
+            </li>
+
+            <li class="automatize__item automatize__item_2">
+              <picture>
+                <source srcset="./img/automatize-img.avif" type="image/avif">
+                <source srcset="./img/automatize-img.webp" type="image/webp">
+                <img src="./img/automatize-img.png" alt="фоточка" loading="lazy" width="648" height="483">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="optimization">
+        <div class="container optimization__container">
+          <h1 class="optimization__title">Оптимизация командной работы</h1>
+
+          <ul class="optimization__list">
+            <li class="optimization__item optimization__item_1">
+              <picture>
+                <source srcset="./img/optimization-img.avif" type="image/avif">
+                <source srcset="./img/optimization-img.webp" type="image/webp">
+                <img src="./img/optimization-img.png" alt="фоточка" loading="lazy" width="714" height="374">
+              </picture>
+            </li>
+
+            <li class="optimization__item optimization__item_2">
+              <p class="optimization__text">
+                Shifton поможет компании сэкономить средства, минимизировав время простоев в работе. Система
+                автоматически назначает смены сотрудникам, обеспечивая плавный и бесперебойный рабочий процесс на
+                предприятии.
+              </p>
+
+              <a href="#" class="optimization__item__link">Начать работу</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="control">
+        <div class="container control__container">
+          <h1 class="control__title">Управление сменами и перерывами</h1>
+
+          <ul class="control__list">
+            <li class="control__item control__item_1">
+              <p class="control__item__text">
+                Создавайте комфортные рабочие графики с учетом личных обстоятельств сотрудников.Работники оценят
+                возможность обмениваться сменами или перерывами с коллегами, а в случае замены сотрудника Shifton
+                мгновенно скорректирует любой график.
+              </p>
+
+              <a href="#" class="control__item__link">Попробовать бесплатно</a>
+            </li>
+
+            <li class="control__item control__item_2">
+              <picture>
+                <source srcset="./img/control-img.avif" type="image/avif">
+                <source srcset="./img/control-img.webp" type="image/webp">
+                <img src="./img/control-img.png" alt="фоточка" loading="lazy" width="369" height="470">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="video">
+        <div class="container video__container">
+          <h2 class="video__title">Shifton - автоматизированный сервис планирования расписаний</h2>
+
+          <picture>
+            <source srcset="./img/video-img.avif" type="image/avif">
+            <source srcset="./img/video-img.webp" type="image/webp">
+            <img class="video__img" src="./img/video-img.png" alt="фоточка" loading="lazy" width="1000" height="563">
+          </picture>
+
+          <p class="video__text">
+            Остались вопросы? С радостью на них ответим! Пишите в чат или на почту <a class="video__text__link"
+              href="mailto:#.com">support@shifton.com</a>
+          </p>
+
+          <ul class="video__list">
+            <li class="video__item">
+              <a href="#" class="video__item__link">
+                <img class="video__item__img" src="./img/video-fb.svg" alt="Facebook">
+              </a>
+            </li>
+
+            <li class="video__item">
+              <a href="#" class="video__item__link">
+                <img class="video__item__img" src="./img/video-twit.svg" alt="twitter">
+              </a>
+            </li>
+
+            <li class="video__item">
+              <a href="#" class="video__item__link">
+                <img class="video__item__img" src="./img/video-in.svg" alt="in">
+              </a>
+            </li>
+
+            <li class="video__item">
+              <a href="#" class="video__item__link">
+                <img class="video__item__img" src="./img/video-youtube.svg" alt="youtube">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__list">
+          <a class="footer__item" href="#">Возможности</a>
+
+          <a class="footer__item" href="#">Блог</a>
+
+          <a class="footer__item" href="#">ЧАВО</a>
+        </div>
+
+        <div class="footer__band"></div>
+
+        <div class="footer__app">
+          <a class="footer__app__google" href="#">
+            <img class="footer__app__img-1" src="./img/footer-google.svg" alt="Google Play" loading="lazy" width="152"
+              height="58">
+          </a>
+
+          <a class="footer__app__apple" href="#">
+            <img class="footer__app__img-2" src="./img/footer-apple.svg" alt="App Store" loading="lazy" width="120"
+              height="40">
+          </a>
+        </div>
+
+        <p class="footer__text">Copyright 2017-2021, Shifton. All rights reserved.</p>
+
+        <div class="footer__list-2">
+          <a href="#" class="footer__list-2__item">Privacy Policy</a>
+
+          <a href="#" class="footer__list-2__item">Terms of Use</a>
+
+          <a href="#" class="footer__list-2__item">Сookies</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

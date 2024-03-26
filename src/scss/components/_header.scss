@@ -1,0 +1,212 @@
+.header {
+  color: #FFFFFF;
+  background-color: #080702;
+  transition: background-color .3s;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .header__logo__img {
+      @media (max-width: 1024px) {
+        width: 86px;
+        height: 25px;
+      }
+    }
+
+    .header__block2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 23px;
+
+      .header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 31px;
+        background-color: #080702;
+
+        @media (max-width: 1100px) {
+          gap: 20px;
+        }
+
+        @media (max-width: 1024px) {
+          flex-direction: column;
+          gap: 31px;
+          visibility: hidden;
+          position: absolute;
+          top: 0;
+          width: 100vw;
+          max-width: 1024px;
+          transition: transform .5s, visibility .5s;
+          z-index: 10;
+          padding-top: 66px;
+          padding-bottom: 115px;
+          margin-left: 71px;
+        }
+
+        @media (max-width: 768px) {
+          margin-left: 53px;
+        }
+
+        &__item {
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 16px;
+          letter-spacing: 0.2px;
+          text-transform: uppercase;
+          transition: 0.3s;
+
+          &:hover {
+            color: #ebe4e4;
+          }
+
+          &:active {
+            color: #ddd0d0;
+          }
+        }
+      }
+
+      .header__btn {
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 500;
+        background-color: #29AAE3;
+        border: 0;
+        border-radius: 26px;
+        transition: 0.3s;
+        padding: 12px 18px;
+
+        @media (max-width: 1024px) {
+          visibility: hidden;
+          position: absolute;
+          top: 345px;
+          left: calc(50% + 91px);
+          width: 183px;
+          height: 47px;
+          transition: transform .5s, visibility .5s;
+          z-index: 10;
+          margin-bottom: 44px;
+        }
+
+        &:hover {
+          background-color: #269ACD;
+        }
+
+        &:active {
+          background-color: #9033F9;
+        }
+      }
+
+      .header__btn-language {
+        position: relative;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        // background-color: transparent;
+        background-color: #080702;
+        border: 0;
+        transition: 0.3s;
+
+        @media (max-width: 1024px) {
+          display: none;
+        }
+
+        &:hover {
+          color: #ebe4e4;
+        }
+
+        &:active {
+          color: #ddd0d0;
+        }
+
+        &::after {
+          display: block;
+          position: absolute;
+          top: 5px;
+          right: -11px;
+          content: '';
+          width: 8px;
+          height: 7px;
+          background-image: url(/img/header-arrowsvg.svg);
+        }
+      }
+    }
+
+    .header__burger {
+      display: none;
+      position: relative;
+      width: 32px;
+      height: 22px;
+      border: none;
+      background-color: transparent;
+      z-index: 11;
+
+      span {
+        position: absolute;
+        width: 32px;
+        height: 2px;
+        background-color: #FFFFFF;
+        transition: transform .3s, opacity .3s, background-color .3s;
+
+        &:nth-child(1) {
+          transform: translateY(0);
+        }
+
+        &:nth-child(2) {
+          transform: translateY(11px);
+        }
+
+        &:nth-child(3) {
+          transform: translateY(22px);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.open.header {
+  // height: 430px;
+  transition: background-color .3s;
+
+  .header__burger {
+    span {
+      &:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(11px) rotate(-45deg);
+      }
+    }
+  }
+
+  .header__nav {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+
+  .header__btn {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+}
