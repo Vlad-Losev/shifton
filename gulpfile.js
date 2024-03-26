@@ -20,7 +20,7 @@ import babel from 'gulp-babel';
 
 const prepros = true; // Вкл или выкл препроцессор
 
-let dev = true;
+let dev = false;
 
 const sass = gulpSass(sassPkg);
 
