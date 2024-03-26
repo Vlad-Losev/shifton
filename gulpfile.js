@@ -18,6 +18,13 @@ import gulpif from 'gulp-if';
 import autoprefixer from 'gulp-autoprefixer';
 import babel from 'gulp-babel';
 
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
+});
+
 const prepros = true; // Вкл или выкл препроцессор
 
 let dev = false;
